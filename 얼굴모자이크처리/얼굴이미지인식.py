@@ -3,7 +3,7 @@
 import numpy as np
 import cv2  # 이미지 및 영상처리를 하기위한 라이브러리
 
-face_cascade = cv2.CascadeClassifier(  # 케스케이드 분류기 음영의 특징을 구분하여 얼굴을 인식하는데 사용하는 속성
+face_cascade = cv2.CascadeClassifier(  # 케스케이드 분류기 음영의 특징을 구분하여 얼굴을 인식하는데 사용
     cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
 )  # 사전 훈련된 하르케스케이드를 불러와 적용시킴 얼굴의 이미지특장점을 6000개로 구분하여 얼굴인식
 eye_casecade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_eye.xml")
@@ -37,4 +37,3 @@ for (x, y, w, h) in faces:
 cv2.imshow("face find", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-# 사용자가 키보드 조작을하기전까지 창을 유지합니다
